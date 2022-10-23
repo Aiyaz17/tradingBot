@@ -20,8 +20,8 @@ def ema_crossover(df):
 
     finalSignal = 0
     if emaSignal==1 and df.Open[-1]>df.EMA_S[-1] and df.Close[-1]<df.EMA_S[-1] and df.High[-1]-df.Open[-1]<=wicklimit:
-        finalSignal = 1
+        finalSignal = -1
     if emaSignal==2 and df.Open[-1]<df.EMA_S[-1] and df.Close[-1]>df.EMA_S[-1] and df.Open[-1]-df.Low[-1]<=wicklimit:
-        finalSignal = 2
+        finalSignal = 1
 
     return finalSignal

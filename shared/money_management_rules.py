@@ -1,5 +1,5 @@
 #  check if already in position
-def already_in_position(positions):
+def already_in_position(positions,symbol,final_signal):
     if len(positions["netPositions"]) == 0: return False
     for position in positions["netPositions"]:
         pos_symbol = position["symbol"]  # NSE:SBIN-EQ
